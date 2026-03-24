@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nebula Xplorer</title>
+    <link rel="stylesheet" href="general-style.css">
+    <link rel="stylesheet" href="hero-style.css">
+    <link rel="stylesheet" href="styles/rocket.css">
+    <script src="scripts/rocket.js" defer></script>
 </head>
-<body>
-    <header></header>
+<body id="top">
+    <header>
+       <nav>
+            <img src="images/logos/nebula-logo-white.png" alt="Nebula Logo" class="header-logo">
+            <div class="menu-trigger"><span></span></div>
+        </nav>
+    </header>
     <main>
-        <section class="hero"></section>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">SRON Mission in Development</span>
+                <h1>Our <span>Mission</span></h1>
+                <p></p>
+                <div class="hero-cta">
+                    <a href="#intro" class="btn-primary">Ontdek de Missie</a>
+                </div>
+            
+            </div>
+        </section>
         <section class="intro"></section>
         <section class="components"></section>
         <section class="values"></section>
         <section class="timeline"></section>
-        <section class="rocket"></section>
+        <section class="rocket-section">
+            <a class="to-top" href="#top" aria-label="launch back to top">
+                <div class="rocket">
+                    <div class="rocket-body">
+                        <div class="rocket-point"></div>
+                        <div class="rocket-window"></div>
+                        <div class="rocket-bottom"></div>
+                    </div>
+                    <div class="rocket-wing left"></div>
+                    <div class="rocket-wing middle"></div>
+                    <div class="rocket-wing right"></div>
+                </div>
+            </a>
+        </section>
     </main>
     <footer></footer>
 </body>

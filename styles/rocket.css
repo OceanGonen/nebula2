@@ -1,0 +1,114 @@
+section{
+    height: 50vh;
+}
+
+.rocket-section a{
+    display: grid;
+    height: 100%;
+    width: min(80vw, 30rem);
+    place-self: center;
+    aspect-ratio: 1;
+}
+
+.rocket{
+    aspect-ratio: 1;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 10fr 1fr;
+    div{
+        display: block;
+    }
+    .rocket-body {
+        transition: box-shadow .2s ease-out;
+        grid-row: 1;
+        grid-column: 2;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 2em;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(225, 225, 225);
+        overflow: hidden;
+        border-radius: 100% 100% 10% 10%;
+        .rocket-point{
+            height: 100%;
+            width: 100%;
+            background-color: red;
+        }
+        .rocket-window{
+            background-color: aqua;
+            aspect-ratio: 1;
+            width: 40%;
+            border-radius: 50%;
+            border: solid red 1em;
+        }
+        .rocket-bottom{
+            background-color: grey;
+            height: 100%;
+            width: 100%;
+            &::after{
+                z-index: 1;
+                display: none;
+                position: absolute;
+                justify-self: center;
+                content: "🔥";
+                transform: translateY(-50%);
+                rotate: 180deg;
+                scale: 20;
+            }
+        }
+    }
+    .rocket-wing{
+        z-index: 10;
+        transition: box-shadow .2s ease-out;
+        align-self: end;
+        background-color: red;
+        grid-row: 1/3;
+        height: 35%;
+        width: 5em;
+        bottom: 0;
+        &.left{
+            justify-self: end;
+            border-radius: 100% 0% 40%;
+        }
+        &.middle{
+            grid-column: 2;
+            border-radius: 100% 100% 10% 10%;
+        }
+        &.right{
+            justify-self: start;
+            border-radius: 0% 100% 0% 40%;
+        }
+    }
+}
+
+.rocket:hover{
+    cursor: pointer;
+    
+    .rocket-body{
+        transition: box-shadow .2s ease-out;
+        box-shadow: 0 0 2em white;
+    }
+    .rocket-wing{
+        transition: box-shadow .2s ease-out;
+        box-shadow: 0 0 2em white;
+    }
+}
+
+.rocket-section.launch{
+    animation: rocket-launch 1.2s ease-in-out;
+    .rocket-bottom::after{
+        display: block;
+    }
+}
+
+@keyframes rocket-launch{
+    from{
+        transform: translateY(0);
+    }
+    to{ 
+        transform: translateY(calc(-1 * var(--page-height) + 100% * -1));
+    }
+}
