@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="hero-style.css">
     <link rel="stylesheet" href="styles/rocket.css">
+    <script src="scripts/rocket.js" defer></script>
 </head>
-<body>
+<body id="top">
     <header>
        <nav>
             <img src="images/logos/nebula-logo-white.png" alt="Nebula Logo" class="header-logo">
@@ -32,17 +33,18 @@
         <section class="values"></section>
         <section class="timeline"></section>
         <section class="rocket-section">
-            <div class="rocket">
-                <div class="rocket-body">
-                    <div class="rocket-point"></div>
-                    <div class="rocket-window"></div>
-                    <div class="rocket-bottom"></div>
+            <a class="to-top" href="#top" aria-label="launch back to top">
+                <div class="rocket">
+                    <div class="rocket-body">
+                        <div class="rocket-point"></div>
+                        <div class="rocket-window"></div>
+                        <div class="rocket-bottom"></div>
+                    </div>
+                    <div class="rocket-wing left"></div>
+                    <div class="rocket-wing middle"></div>
+                    <div class="rocket-wing right"></div>
                 </div>
-                <div class="rocket-wing left"></div>
-                <div class="rocket-wing middle"></div>
-                <div class="rocket-wing right"></div>
-            <div>
-            <div class="rocket-fire"></div>
+            </a>
         </section>
     </main>
     <footer></footer>
