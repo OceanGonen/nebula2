@@ -44,5 +44,5 @@ window.addEventListener("DOMContentLoaded", () => {
     bgMusic.volume = 1
     bgMusic.play().catch(e => {
         console.log("Autoplay prevented:", e)
-    });
-});
+    })
+})

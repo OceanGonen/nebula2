@@ -1,24 +1,23 @@
-const toTopLink = document.querySelector(".to-top");
-const rocketSection = document.querySelector(".rocket-section");
-var countdown = new Audio('sounds/countdown.mp3');
-var launch = new Audio('sounds/launch.mp3');
+const toTopLink = document.querySelector(".to-top")
+const rocketSection = document.querySelector(".rocket-section")
+var countdown = new Audio('sounds/countdown.mp3')
+var launch = new Audio('sounds/launch.mp3')
 
-// Pass the function, don't call it immediately
-toTopLink.addEventListener("click", launching);
+toTopLink.addEventListener("click", launching)
 
 async function launching(e) {
-    e.preventDefault();
-    document.documentElement.style.setProperty('--page-height', document.body.scrollHeight + 'px');
+    e.preventDefault()
+    document.documentElement.style.setProperty('--page-height', document.body.scrollHeight + 'px')
 
-    countdown.currentTime = 0;
-    countdown.play();
+    countdown.currentTime = 0
+    countdown.play()
     await new Promise(resolve => {
         countdown.onended = resolve;  //chatGPT prompt: how can i set a timeout so the class is added after a while?
     });
 
-    rocketSection.classList.add("launch");
+    rocketSection.classList.add("launch")
     launch.play();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    await new Promise(resolve => setTimeout(resolve, 2500));
-    rocketSection.classList.remove("launch");
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    await new Promise(resolve => setTimeout(resolve, 2500))
+    rocketSection.classList.remove("launch")
 }
