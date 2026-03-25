@@ -1,11 +1,24 @@
-const toTopLink = document.querySelector(".to-top")
-const rocketSection = document.querySelector(".rocket-section")
+const toTopLink = document.querySelector(".to-top");
+const rocketSection = document.querySelector(".rocket-section");
+var countdown = new Audio('sounds/countdown.mp3');
+var launch = new Audio('sounds/launch.mp3');
 
-toTopLink.addEventListener("click", launching)
+// Pass the function, don't call it immediately
+toTopLink.addEventListener("click", launching);
 
-async function launching() {
-    document.documentElement.style.setProperty('--page-height', document.body.scrollHeight + 'px') //chatGPT prompt: hoe zorg ik ervoor dat de raket altijd tot boven de pagina gaat?
-    rocketSection.classList.add("launch")
-    await new Promise(resolve => setTimeout(resolve, 1200)); // https://masteringjs.io/tutorials/fundamentals/wait-1-second-then
-    rocketSection.classList.remove("launch")
+async function launching(e) {
+    e.preventDefault();
+    document.documentElement.style.setProperty('--page-height', document.body.scrollHeight + 'px');
+
+    countdown.currentTime = 0;
+    countdown.play();
+    await new Promise(resolve => {
+        countdown.onended = resolve;  //chatGPT prompt: how can i set a timeout so the class is added after a while?
+    });
+
+    rocketSection.classList.add("launch");
+    launch.play();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    await new Promise(resolve => setTimeout(resolve, 2500));
+    rocketSection.classList.remove("launch");
 }
