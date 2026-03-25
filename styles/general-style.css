@@ -1,8 +1,3 @@
-/* @property --scale {
-    syntax: "<number>";
-    inherits: true;
-} */
-
 :root{
     --scale: 1;
     --body-bg: #181932;
@@ -17,9 +12,6 @@
     --primary-color: ;
     --secundairy-color: #EB5D34;
     --highlight-color: ;
-    
-
-    /* --blackhole-padding: 4em; */
 }
 
 @font-face {
@@ -73,14 +65,10 @@ header {
         top: -3em;
         right: -1em;
         animation-name: implode;
-        /* animation-duration: 1s; */
         animation-timeline: --scroll-components;
         animation-range: entry-crossing 0% exit 100%;
         animation-fill-mode: both;
         .blackhole{
-            /* --blackhole-padding: 4em; */
-            /* scale: var(--scale); */
-            
             animation: scale 10s linear infinite alternate;
         }
     }
