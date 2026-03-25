@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/rocket.css">
     <link rel="stylesheet" href="styles/components-style.css">
     <link rel="stylesheet" href="styles/values-style.css">
+    <link rel="stylesheet" href="styles/countdown-style.css">
 </head>
 
 
@@ -123,7 +124,8 @@
                             <strong>from
                                 milliseconds to weeks.</strong> This long observation time makes it possible to combine
                             X-ray activity with data from
-                            other wavelengths from other telescopes.</p>
+                            other wavelengths from other telescopes.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -141,7 +143,7 @@
             <p>We strive for the best, in ourselves and in our mission</p>
             <p>We embrace our problems as learning opportunities</p>
             <p>We desire to explore, question and understand the unknown</p>
- 
+
             <div class="blackhole"></div>
             <div class="orbit">
                 <span class="collaboration">Collaboration</span>
@@ -208,8 +210,29 @@
             <p>September 2027 onwards: flight model, testing, outreach, management</p>
             <p>September 2029 onwards: Launch, science, outreach, management </p>
 
-
+            
         </section>
+        <section class="countdown">
+    <h2>Time until <strong>launch</strong></h2>
+    <div class="countdown-grid">
+        <div class="countdown-unit">
+            <span class="countdown-number" id="cd-days">000</span>
+            <span class="countdown-label">days</span>
+        </div>
+        <div class="countdown-unit">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="countdown-label">hours</span>
+        </div>
+        <div class="countdown-unit">
+            <span class="countdown-number" id="cd-minutes">00</span>
+            <span class="countdown-label">minutes</span>
+        </div>
+        <div class="countdown-unit">
+            <span class="countdown-number" id="cd-seconds">00</span>
+            <span class="countdown-label">seconds</span>
+        </div>
+    </div>
+</section>
         <section class="rocket-section">
             <a class="to-top" href="#top" aria-label="launch back to top">
                 <div class="rocket">
@@ -225,7 +248,42 @@
             </a>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section brand">
+                <img src="images/logos/nebula-logo-white.png" alt="Nebula Logo" class="footer-logo">
+                <p>Exploring the unseen, understanding the unknown. Researching black holes for the future of
+                    astrophysics.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#intro">Our Mission</a></li>
+                    <li><a href="#satInfo">The Satellite</a></li>
+                    <li><a href="#first-star">Timeline</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section partners">
+                <h3>Partners</h3>
+                <div class="partner-logos">
+                    <img src="images/logos/SRON-logo.png" alt="SRON Logo">
+                </div>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Netherlands Educational Satellite</p>
+                <p>Email: <a href="mailto:info@nebulaxplorer.nl">info@nebulaxplorer.nl</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nebula Xplorer Project. All rights reserved. | Powered by SRON & Dutch Universities</p>
+        </div>
+    </footer>
 </body>
 
 
@@ -233,3 +291,4 @@
 <script src="scripts/hero-script.js"></script>
 <script src="scripts/rocket.js" defer></script>
 <script src="scripts/components-script.js" defer></script>
+<script src="scripts/countdown-script.js" defer></script>
