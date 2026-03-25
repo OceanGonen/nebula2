@@ -1,0 +1,130 @@
+
+body {
+background-color: #0b0b25;
+}
+
+
+.values {
+    
+    position: relative;
+    background-color: inherit;
+    padding: 10em;
+
+    display:grid;
+    place-items: center;
+
+    
+}
+
+
+.blackhole {
+    grid-area: 1/1;
+
+    display: flex;
+    justify-self: center;
+    padding: 4em;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, 
+    black, 
+    #1a0d05 55%,  
+    color(display-p3 1.0 0.8 0.62) 55%,      
+    color(display-p3 1.0 0.3843 0.0) 80%,    
+    color(display-p3 1.0 0.4353 0.0) 100%       
+    );
+
+    box-shadow: 
+    0 0 1em color(display-p3 0.8 0.4 0.0),    
+    0 0 3em color(display-p3 1.0 0.7 0.7),  
+    0 0 6em color(display-p3 1.0 0.4 0.0);   
+    
+    filter: blur(0.2em);
+
+
+
+    animation: scale 2s linear infinite alternate;
+}
+
+
+
+
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+
+
+.orbit {
+ 
+    grid-area: 1/1;
+       animation: text-scale 4s linear infinite;
+
+    display:grid;
+    place-items: center;
+
+
+    animation: spin 20s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+        
+    }
+
+}
+
+
+.orbit span {
+    background-color: rgba(162, 162, 163, 0.062);
+clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    border: 1px solid rgba(248, 248, 248, 0.108);
+
+    backdrop-filter: blur(0.5em);
+    filter: saturate(1.2);
+    grid-area: 1/1;
+
+    color: white;
+    padding: 2em;
+    padding-inline: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.orbit span:nth-child(1) { transform: rotate(0deg) translateY(9em); }
+.orbit span:nth-child(2) { transform: rotate(60deg) translateY(9em); }
+.orbit span:nth-child(3) { transform: rotate(120deg) translateY(9em); }
+.orbit span:nth-child(4) { transform: rotate(180deg) translateY(9em); }
+.orbit span:nth-child(5) { transform: rotate(240deg) translateY(9em); }
+.orbit span:nth-child(6) { transform: rotate(300deg) translateY(9em); }
+
+
+.orbit span:hover {
+cursor: default;
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    animation-play-state: paused;
+}
+
+
+
+.info{
+    display: none;
+}
+
+.collaboration:hover .info {
+    display: block;
+    transition: 1s;
+    justify-content: center;
+    transform: rotate(0deg);
+}
+
+ @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+
+ }
+
