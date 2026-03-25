@@ -39,12 +39,40 @@ html, body{
     timeline-scope: --moveSatellite, --scroll-components;
 }
 
+.cursor {
+    z-index: 99;
+    position: fixed;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background: radial-gradient(
+        closest-side circle at center,
+        black 0%,
+        #1a0d05 10%,  
+        color(display-p3 1.0 0.8 0.62 / 0.8) 40%,        
+        color(display-p3 1.0 0.4353 0.0 / 0.8) 55%,
+        color(display-p3 1.0 0.4353 0.0 / .3) 75%,
+        color(display-p3 1.0 0.4353 0.0 / 0) 100%
+    );
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+    pointer-events: none;
+}
 
-
-
+.cursor-hover {
+    background: radial-gradient(
+        closest-side circle at center,
+        black 0%,
+        #1a0d05 10%,  
+        color(display-p3 0.62 0.8 1.0 / 0.8) 40%,        
+        color(display-p3 0.0 0.4353 1.0 / 0.8) 55%,
+        color(display-p3 0.0 0.4353 1.0 / 0.3) 75%,
+        color(display-p3 0.0 0.4353 1.0 / 0) 100%
+    );
+}
 
 h1, h2{
-    color: var(--heading-color); 
+    color: var(--heading-color);
     font-family: "heading-spacefont";
     font-weight: 900;
     text-align: center;
@@ -92,3 +120,81 @@ header {
     will-change: transform, opacity, filter;
 }
 
+footer {
+    background: rgba(5, 5, 15, 0.95); /* Donkere ruimte kleur */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: var(--secundairy-color); 
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secundairy-color);
+}
+
+.partner-logos img {
+    height: 40px;
+    filter: grayscale(1) brightness(2); /* Maakt logo's wit voor eenheid */
+    transition: filter 0.3s ease;
+}
+
+.partner-logos img:hover {
+    filter: grayscale(0) brightness(1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.contact a{
+    color: var(--secundairy-color);
+}
