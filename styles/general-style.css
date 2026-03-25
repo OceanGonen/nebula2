@@ -39,12 +39,40 @@ html, body{
     timeline-scope: --moveSatellite, --scroll-components;
 }
 
+.cursor {
+    z-index: 99;
+    position: fixed;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background: radial-gradient(
+        closest-side circle at center,
+        black 0%,
+        #1a0d05 10%,  
+        color(display-p3 1.0 0.8 0.62 / 0.8) 40%,        
+        color(display-p3 1.0 0.4353 0.0 / 0.8) 55%,
+        color(display-p3 1.0 0.4353 0.0 / .3) 75%,
+        color(display-p3 1.0 0.4353 0.0 / 0) 100%
+    );
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+    pointer-events: none;
+}
 
-
-
+.cursor-hover {
+    background: radial-gradient(
+        closest-side circle at center,
+        black 0%,
+        #1a0d05 10%,  
+        color(display-p3 0.62 0.8 1.0 / 0.8) 40%,        
+        color(display-p3 0.0 0.4353 1.0 / 0.8) 55%,
+        color(display-p3 0.0 0.4353 1.0 / 0.3) 75%,
+        color(display-p3 0.0 0.4353 1.0 / 0) 100%
+    );
+}
 
 h1, h2{
-    color: var(--heading-color); 
+    color: var(--heading-color);
     font-family: "heading-spacefont";
     font-weight: 900;
     text-align: center;
