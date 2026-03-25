@@ -1,37 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nebula Xplorer</title>
-    <link rel="stylesheet" href="general-style.css">
-    <link rel="stylesheet" href="hero-style.css">
+    <link rel="stylesheet" href="styles/satellite.css">
+    <link rel="stylesheet" href="styles/hero-style.css">
+    <link rel="stylesheet" href="styles/timeline-style.css" >
+    <link rel="stylesheet" href="styles/general-style.css">
     <link rel="stylesheet" href="styles/rocket.css">
-    <script src="scripts/rocket.js" defer></script>
+    <link rel="stylesheet" href="styles/components-style.css">
+    <link rel="stylesheet" href="styles/values-style.css">
 </head>
+
+
+
 <body id="top">
     <header>
-       <nav>
-            <img src="images/logos/nebula-logo-white.png" alt="Nebula Logo" class="header-logo">
-            <div class="menu-trigger"><span></span></div>
+        <nav>
+            <img src="images/logos/nebula-logo-white.png" alt="Nebula Logo" class="hero-logo">
         </nav>
+        <div class="blackhole-container">
+            <div class="blackhole"></div>
+        </div>
     </header>
+
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <span class="eyebrow">SRON Mission in Development</span>
-                <h1>Our <span>Mission</span></h1>
-                <p></p>
-                <div class="hero-cta">
-                    <a href="#intro" class="btn-primary">Ontdek de Missie</a>
+        <div class="satellite-both-ani">
+            <div class="satellite-container">
+                <div class="satellite">
+                    <img class="satellite-image" src="images/satellite-front-view.png"
+                        alt="a front view of the satellite">
+                    <img src="images/satellite-front-view-part.png" alt="x-ray instrument on the satellite">
                 </div>
-            
+            </div>
+            <div class="satellite-scroll-container" style="--stn: moveSatellite">
+
+                <section class="hero">
+                    <div class="hero-content blackhole-target">
+                        <em class=" blackhole-target">Powered by <img src="images/logos/SRON-logo.png"
+                                alt="SRON Logo"></em>
+
+
+                        <div class="hero-cta">
+                            <a href="#intro" class="btn-primary">DISCOVER</a>
+                        </div>
+
+                    </div>
+                </section>
+                <i id="intro"></i>
+                <section class="intro">
+
+                    <div class="intro-container">
+                        <h2 class=" blackhole-target"> Our <strong>mission</strong></h2>
+                        <p class=" blackhole-target">
+                            <strong>NEBULA-Xplorer</strong> is the Netherlands Educational Satellite for Exploration of
+                            BinaryLinked Astrophysics
+                            - X-ray observer.
+                        </p>
+
+                        <p class=" blackhole-target">
+                            <strong>The goal</strong> is for a satellite to be launched into space around 2030 to
+                            conduct
+                            research into black holes. Or more specifically: <em>how a black hole devours material
+                                from a star orbiting it.</em>
+                        </p>
+
+                        <p class=" blackhole-target">Taking a closer look at black holes could ultimately yield more
+                            information
+                            about the <strong>
+                                origin of the universe.</strong></p>
+                    </div>
+
+                </section>
+
+            </div>
+            <section class="components" style="--stn: --focusSatellite">
+
+                <h2> Our <strong>baby</strong></h2>
+                <div class="components-wrapper">
+
+                    <div class="satellite-wrapper">
+                        <img src="images/assets/satellite/satellite-front-view.png" class="sat-layer">
+                        <img src="images/assets/satellite/top.png" class="sat-layer">
+                        <img src="images/assets/satellite/solarpanel-right.png" class="sat-layer">
+
+                        <svg class="sat-svg" viewBox="0 0 540 480">
+
+                            <polygon class="hit-area" id="lens-array" data-component="X-ray Lens Array"
+                                points="279,192  274,248  331,349  455,284  400,186  345,159" />
+
+                            <polygon class="hit-area" id="solarpanels" data-component="Solar Panels"
+                                points="370,97,389,140,517,76,539,10" />
+                            <polygon class="hit-area" id="solarpanels" data-component="Solar Panels"
+                                points="6,338,31,272,198,185,179,252" />
+
+                            <polygon class="hit-area" id="top" data-component="top"
+                                points="211,136,224,95,285,64,306,87" />
+
+                            <polygon class="hit-area" id="bottom" data-component="bottom"
+                                points="298,439,326,371,460,303,438,366" />
+                        </svg>
+                    </div>
+
+                    <!-- Info panel buiten satellite-wrapper -->
+                    <div class="sat-info" id="satInfo">
+                        <h3 id="satInfoTitle"></h3>
+                        <p id="satInfoText"></p>
+                    </div>
+
+                </div>
+                <div class="components-text-container">
+
+                        <h3>X-ray double stars</h3>
+                    <p>Many of the brightest objects in the Universe are X-ray binaries. These are combinations of an
+                        extremely compact object, such as a black hole or neutron star, and a companion star. Over time,
+                        the
+                        compact object extracts matter from its companion star. This releases lots of energy through a
+                        jet.
+                        Scientists do not yet fully understand this process. Especially the nature of the stream of
+                        matter
+                        right next to the black hole remains a big mystery.</p>
+                    <h3>Long observation periods</h3>
+                    <p>NEBULA-Xplorer will investigate how jets form and how X-ray binaries evolve. It will observe
+                        these
+                        objects for long periods of time to see how their emission varies on time scales from
+                        milliseconds
+                        to weeks. This long observation time makes it possible to combine X-ray activity with data from
+                        other wavelengths from other telescopes.</p>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+        <section class="values">
+            <h2> Our <strong>values</strong></h2>
+
+            <div class="blackhole"></div>
+            <div class="orbit">
+                <span>Collaboration</span>
+                <span>Inclusion</span>
+                <span>Diversity</span>
+                <span>Ambition</span>
+                <span>Resilience</span>
+                <span>Curiosity</span>
             </div>
         </section>
-        <section class="intro"></section>
-        <section class="components"></section>
-        <section class="values"></section>
-        <section class="timeline"></section>
+        <section class="timeline">
+            <h2> Our <strong>plan</strong></h2>
+
+            <div class="star-cluster1"></div>
+            <div class="star-cluster2"></div>
+            <div class="star-cluster3"></div>
+            <div class="star-cluster4"></div>
+            <div class="star-cluster5"></div>
+            <div class="star-cluster6"></div>
+
+
+            <input type="radio" name="stars" id="first-star">
+            <label for="first-star" class="first-star"></label>
+
+            <connector class="first-to-second"></connector>
+
+            <input type="radio" name="stars" id="second-star">
+            <label for="second-star" class="second-star"></label>
+
+            <connector class="second-to-third"></connector>
+
+            <input type="radio" name="stars" id="third-star">
+            <label for="third-star" class="third-star"></label>
+
+            <connector class="third-to-fourth"></connector>
+
+            <input type="radio" name="stars" id="fourth-star">
+            <label for="fourth-star" class="fourth-star"></label>
+
+            <connector class="fourth-to-fifth"></connector>
+
+            <input type="radio" name="stars" id="fifth-star">
+            <label for="fifth-star" class="fifth-star"></label>
+
+            <connector class="fifth-to-sixth"></connector>
+
+            <input type="radio" name="stars" id="sixth-star">
+            <label for="sixth-star" class="sixth-star"></label>
+
+            <div class="falling-stars">
+                <div class="falling-star"></div>
+                <div class="falling-star"></div>
+                <div class="falling-star"></div>
+                <div class="falling-star"></div>
+                <div class="falling-star"></div>
+            </div>
+
+
+            <p>September 2024 - 9 master students: Instrument Concept</p>
+            <p>November 2024 - 19 bachelor students: Orbits / Ground Stations / Telemetry / ... </p>
+            <p>Januari 2025 - 10 bachelor / 1 master thesis & 1 student secondary vocational studies (LiS):
+                Satellite + Concentrators + Readout electronics</p>
+            <p>September 2025 onwards: Prototypes, engineering model, outreach, management</p>
+            <p>September 2027 onwards: flight model, testing, outreach, management</p>
+            <p>September 2029 onwards: Launch, science, outreach, management </p>
+
+
+        </section>
         <section class="rocket-section">
             <a class="to-top" href="#top" aria-label="launch back to top">
                 <div class="rocket">
@@ -49,4 +226,9 @@
     </main>
     <footer></footer>
 </body>
+
+
 </html>
+<script src="scripts/hero-script.js"></script>
+<script src="scripts/rocket.js" defer></script>
+<script src="scripts/components-script.js" defer></script>

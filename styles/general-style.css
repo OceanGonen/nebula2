@@ -1,0 +1,106 @@
+/* @property --scale {
+    syntax: "<number>";
+    inherits: true;
+} */
+
+:root{
+    --scale: 1;
+    --body-bg: #181932;
+    --heading-font: ;
+    --heading-color: #FFF;
+    --heading-font-size: ;
+
+    --text-font: ;
+    --text-color: #FFF;
+    --text-font-size: ;
+
+    --primary-color: ;
+    --secundairy-color: #EB5D34;
+    --highlight-color: ;
+    
+
+    /* --blackhole-padding: 4em; */
+}
+
+@font-face {
+  font-family: 'heading-spacefont'; 
+  src: url('../fonts/n-neco-font/Neco-pg9Ed.otf') format('opentype'); 
+}
+@font-face {
+  font-family: 'text-spacefont'; 
+  src: url('../fonts/gatte-modern-font/GatteModernRegular-aY5GJ.otf') format('opentype'); 
+}
+
+
+/* MARK: General Styling */
+html, body{
+   
+    background: linear-gradient(to bottom,  var(--body-bg), #0b0c1a);
+     background: radial-gradient(ellipse at center, #181932, #1e1d1d);
+
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    font-family: "text-spacefont";
+    scroll-behavior: smooth;
+    timeline-scope: --moveSatellite, --scroll-components;
+}
+
+
+
+
+
+h1, h2{
+    color: var(--heading-color); 
+    font-family: "heading-spacefont";
+    font-weight: 900;
+    text-align: center;
+
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+    margin-top: 0;
+
+    & strong {
+        color: var(--secundairy-color);
+    }
+}
+
+
+header {
+    .blackhole-container{
+        position: fixed;
+        top: -3em;
+        right: -1em;
+        animation-name: implode;
+        /* animation-duration: 1s; */
+        animation-timeline: --scroll-components;
+        animation-range: entry-crossing 0% exit 100%;
+        animation-fill-mode: both;
+        .blackhole{
+            /* --blackhole-padding: 4em; */
+            /* scale: var(--scale); */
+            
+            animation: scale 10s linear infinite alternate;
+        }
+    }
+}
+
+.components{
+    view-timeline: --scroll-components;
+}
+
+@keyframes implode{
+    from{
+        scale: 4em;
+    }
+    to{
+        scale: 0;
+    }
+}
+
+.blackhole-target {
+    transform-origin: top right;
+    will-change: transform, opacity, filter;
+}
+

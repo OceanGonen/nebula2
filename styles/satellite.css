@@ -1,0 +1,78 @@
+
+.satellite-scroll-container{
+    view-timeline-name: --moveSatellite;
+}
+.components{
+    height: 100vh;
+    view-timeline-name: --scroll-components;
+}
+
+.satellite-container{
+    position: sticky;
+    z-index: 0;
+    top: 50%;
+    display: grid;
+    animation-name: moveSatellite;
+    animation-timeline: --moveSatellite;
+    animation-range: entry 0% exit 0%;
+    animation-fill-mode: both;
+    margin-bottom: 5em;
+    
+    .satellite{
+        display: grid;
+        animation: focusSatellite linear;
+        animation-timeline: --scroll-components;
+        animation-range: entry 0% entry 30%;
+        animation-fill-mode: both;
+        img{
+            place-self: center;
+            width: 40%;
+            grid-area: 1/1;
+            animation: float 2s infinite ease-in-out alternate-reverse;
+        }
+    }
+
+}
+
+@keyframes float{
+    0%{
+        transform: 
+            translateY(0)
+            translateX(0);
+    }
+    100%{
+        transform: 
+            translateY(1.5em)
+            translateX(.5em);
+    }
+}
+
+@keyframes moveSatellite {
+    0% { 
+        transform: translateX(0px);
+    }
+    25% { 
+        transform: translateX(-40vw);
+    }
+    75% { 
+        transform: translateX(40vw);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes focusSatellite {
+    0% { 
+        transform: scale(1); 
+    }
+    30%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.5); 
+    }
+    100% { 
+        transform: scale(1.5); 
+    }
+}
