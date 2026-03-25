@@ -13,7 +13,7 @@
     display: grid;
     animation-name: moveSatellite;
     animation-timeline: --moveSatellite;
-    animation-range: entry 0% exit 0%;
+    animation-range: cover 15% exit 0%;
     animation-fill-mode: both;
     margin-bottom: 5em;
     
@@ -21,7 +21,7 @@
         display: grid;
         animation: focusSatellite linear;
         animation-timeline: --scroll-components;
-        animation-range: entry 0% entry 30%;
+        animation-range: entry 0% entry 70%;
         animation-fill-mode: both;
         img{
             place-self: center;
@@ -48,13 +48,13 @@
 
 @keyframes moveSatellite {
     0% { 
-        transform: translateX(0px);
+        transform: translateX(-40%);
     }
-    25% { 
-        transform: translateX(-40vw);
+    50% { 
+        transform: translateX(-10%);
     }
-    75% { 
-        transform: translateX(40vw);
+    80% { 
+        transform: translateX(30%);
     }
     100% {
         transform: translateX(0px);
@@ -68,10 +68,12 @@
     30%{
         transform: scale(1);
     }
-    60%{
+    80%{
         transform: scale(1.5); 
+        opacity: 1;
     }
     100% { 
         transform: scale(1.5); 
+        opacity: 0;
     }
 }
