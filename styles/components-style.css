@@ -101,7 +101,7 @@
 
 }
 
-/* Info panel — niet meer absolute, gewoon in de flow */
+
 .sat-info {
     max-width: 280px;
     background: rgba(24, 25, 50, 0.95);
@@ -122,12 +122,12 @@
 
 .satellite-wrapper {
     position: relative;
-    width: min(540px, 100%); /* nooit breder dan het scherm */
+    width: min(540px, 100%); 
 }
 
 @media (max-width: 768px) {
     .components-wrapper {
-        flex-direction: column; /* op mobiel onder elkaar */
+        flex-direction: column; 
         align-items: center;
     }
 
@@ -139,5 +139,26 @@
 
     .sat-info.visible {
         transform: translateY(0);
+    }
+}
+
+.components-text-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+
+
+.components-text {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+
+    & p strong{
+        color: var(--secondary-color);
     }
 }
