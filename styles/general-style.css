@@ -23,6 +23,9 @@
   src: url('../fonts/gatte-modern-font/GatteModernRegular-aY5GJ.otf') format('opentype'); 
 }
 
+#favicon{
+    rotate: 90deg;
+}
 
 /* MARK: General Styling */
 html, body{
