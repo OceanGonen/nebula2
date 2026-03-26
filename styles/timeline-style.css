@@ -53,7 +53,7 @@
     align-self: center;
     justify-self: center;
     width: 11em;
-    transform: translateY(100%);
+    transform: translateY(50%);
 }
 
 .timeline p:nth-of-type(4) {
