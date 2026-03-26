@@ -207,7 +207,6 @@ justify-self: center;
 
 
 .value h2 {
-    transform: scale(1.2);
     display: grid;
     display: inline-block;
     grid-area:1/1;
@@ -218,8 +217,8 @@ justify-self: center;
 .values p {
     grid-area:2/1;
     display: block;
-    padding-left: 0;
- justify-content: center;
+    padding-inline: 5em;
+     justify-content: center;
  text-align: center;
 
 
