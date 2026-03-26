@@ -39,6 +39,11 @@ html, body{
     timeline-scope: --moveSatellite, --scroll-components;
 }
 
+main {
+    z-index: 1;
+    position: relative;
+}
+
 .cursor {
     z-index: 99;
     position: fixed;
