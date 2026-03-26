@@ -180,10 +180,11 @@ justify-self: center;
   color(display-p3 0.984 0.741 0.529) 100%
 );
 
-  box-shadow: 0 0 2em #661a00, 0 0 3em #661a00;
+  box-shadow:   0 0 2em color(display-p3 0.42 0.10 0.00), 
+  0 0 3em color(display-p3 0.42 0.10 0.00);
   animation: rotate 10s linear infinite; 
   z-index: 0;
-  filter: blur(0.4em) brightness(1.6);
+  filter: blur(0.4em) brightness(1.7);
 
 }
 
@@ -219,6 +220,7 @@ justify-self: center;
     display: block;
     padding-left: 0;
  justify-content: center;
+ text-align: center;
 
 
 }
