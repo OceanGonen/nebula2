@@ -217,6 +217,7 @@ p {
     position: absolute;
     filter: drop-shadow(0 0 6px #fff);
     z-index: 2;
+    pointer-events: none;
 }
 
 .first-to-second {
