@@ -153,6 +153,7 @@
 
 
 .components-text {
+    max-width: 800px;
     color: var(--text-color);
     font-size: 1.2rem;
     line-height: 1.8;
