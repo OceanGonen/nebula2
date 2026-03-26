@@ -101,11 +101,31 @@ header {
         animation-timeline: --scroll-components;
         animation-range: entry 0% cover 50%;
         animation-fill-mode: both;
+        display: grid;
         .blackhole{
             animation: scale 10s linear infinite alternate;
+            grid-area: 1/1;
+            aspect-ratio: 1;
+            scale: .7;
         }
+
+
+        .ring{
+            grid-area: 1/1;
+        }
+        @media (max-width: 50em)  {
+           .blackhole{
+            animation: scale 10s linear infinite alternate;
+            grid-area: 1/1;
+        }
+      .ring{
+            grid-area: 1/1;
+        }
+}
     }
 }
+
+
 
 .components{
     view-timeline: --scroll-components;
