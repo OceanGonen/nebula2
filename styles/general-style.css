@@ -198,3 +198,15 @@ footer {
 .contact a{
     color: var(--secundairy-color);
 }
+
+p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+strong{
+    color: var(--secondary-color);
+    font-weight: 800;
+}
