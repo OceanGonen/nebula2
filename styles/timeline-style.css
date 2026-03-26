@@ -30,7 +30,7 @@ p {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    font-size: 1.4rem;
+    font-size: clamp(0.9em, 1.4vw, 1.4rem) ;
     z-index: 4;
 }
 
