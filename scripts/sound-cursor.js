@@ -1,3 +1,4 @@
+window.addEventListener("DOMContentLoaded", () => {
 const body = document.querySelector("body")
 
 // cursor
@@ -39,7 +40,6 @@ document.querySelectorAll(glitchSelectors).forEach(el => {
   })
 })
 
-window.addEventListener("DOMContentLoaded", () => {
     bgMusic.loop = true
     bgMusic.volume = 1
     bgMusic.play().catch(e => {
