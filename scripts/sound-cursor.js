@@ -30,8 +30,8 @@ document.addEventListener("mouseout", (e) => {
 
 // sounds
 const glitchSelectors = "label, polygon"
-var glitch = new Audio('sounds/glitchy-pop.mp3')
-var bgMusic = new Audio('sounds/background.mp3')
+var glitch = new Audio("sounds/glitchy-pop.mp3")
+var bgMusic = new Audio("sounds/background.mp3")
 
 document.querySelectorAll(glitchSelectors).forEach(el => {
   el.addEventListener('click', () => {
