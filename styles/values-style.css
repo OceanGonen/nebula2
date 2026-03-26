@@ -211,6 +211,7 @@ justify-self: center;
     display: inline-block;
     grid-area:1/1;
     padding-inline: 0;
+    
 }
 
 .values p {
